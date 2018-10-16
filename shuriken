@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-#
-## to be run in daemontools
-## launch via: bash core.sh /path/to/exploits &>> /dev/null
-#  logs via syslog local3.* so you can catch in /var/log/shuriken or something
 
 declare -A teams
 declare -a pid_files

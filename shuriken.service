@@ -1,0 +1,8 @@
+[Unit]
+Description=Shuriken Launcher for A2F
+
+[Service]
+ExecStart=/home/pr0ph3t/Documents/C3T/a2f/shuriken-framework/shuriken
+
+[Install]
+WantedBy=default.target

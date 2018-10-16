@@ -1,2 +1,2 @@
 #!/bin/sh
-export TMOUT="${TMOUT:-30}"
+export TMOUT="${TMOUT:-180}"

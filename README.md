@@ -44,6 +44,8 @@ EOF
 touch /var/log/shuriken
 ```
 
+Make sure you restart the syslog daemon after you change this with `sudo systemctl restart syslog.service`
+
 ### Per-Exploit Logs
 
 Each exploit attempt gets its own log directory, in the `logs` directory.  Each log directory is timestamped, and includes the team name and target IP.  For example, it might look something like: `exploits/example_slowpoke/logs/2015-07-01-02:37:58-samurai-104.236.67.106-94230`.
@@ -77,6 +79,10 @@ By default, at the beginning of each round, the repository is updated from GitHu
 To disable this behavior, delete or comment out `config/00-github`.
 
 [fork]: https://help.github.com/articles/fork-a-repo/
+
+## Service
+
+Copy the `shuriken.service` file to `/etc/systemd/user`. Make sure the privileges are 644. Then run `systemctl --user daemon-reload` to load the service file, then `systemctl start shuriken.service` to start the launcher. This runs as the current user, so no need to run as root
 
 ## Listeners
 
