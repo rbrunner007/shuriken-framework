@@ -1,6 +1,6 @@
 #!/bin/bash
 # teams has been declared as an associative array in the main shuriken script with declare -A teams
 
-teams["Air Force"]="172.20.3.2"
+# teams["Air Force"]="172.20.3.2"
 teams["Non Scoring"]="172.20.4.2"
 teams["Zombie"]="172.20.5.2"
